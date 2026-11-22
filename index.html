@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">WavePulse — تنزيل أغاني سونو بسهولة</title>
-    <meta id="meta-desc" name="description" content="تنزيل أغاني سونو بسهولة مع WavePulse. تطبيق أندرويد للتعامل مع روابط Suno، استعراض المحتوى، تنزيل الملفات وحفظها في المكتبة ومشاركتها.">
-    <meta name="keywords" content="تنزيل أغاني سونو, WavePulse, تنزيل ملفات Suno, تطبيق WavePulse للأندرويد, Suno links, APK">
+    <title id="page-title">تنزيل اغاني سونو مجانا — تحميل الاغاني مجانا (صوت فقط)</title>
+    <meta id="meta-desc" name="description" content="تنزيل اغاني سونو مجانا وتحميل الاغاني مجانا بصيغة صوت فقط مع تطبيق WavePulse للأندرويد. تعامل مع روابط سونو، استعرض المحتوى الصوتي المتاح، نزّل الملفات الصوتية واحفظها في المكتبة وشاركها.">
+    <meta name="keywords" content="تنزيل اغاني سونو مجانا, تحميل الاغاني مجانا, تحميل أغاني سونو, تحميل أغاني Suno مجانا, تنزيل أغنية سونو MP3, تحميل موسيقى الذكاء الاصطناعي, تحميل أغنية من رابط سونو, تحميل أغاني سونو بدون اشتراك, برنامج تحميل أغاني Suno, تنزيل أغاني سونو على الهاتف, تنزيل اغاني سونا مجانا, WavePulse, Suno downloader, Suno download mp3, Suno to MP3, Download Suno songs free, Suno AI song downloader, Suno music downloader, Suno downloader online, Download Suno song without subscription, Suno MP3 download free, Suno WAV downloader, Suno song link downloader, Suno audio downloader, Download music from Suno link, Suno public song downloader, Suno downloader Android, Suno télécharger MP3 gratuitement, Descargar canciones de Suno gratis, Suno Song kostenlos herunterladen, Скачать песни Suno бесплатно, Suno MP3 indir ücretsiz, Download Suno şarkı MP3">
     <meta property="og:type" content="website">
-    <meta property="og:title" id="og-title" content="WavePulse — تنزيل أغاني سونو بسهولة">
-    <meta property="og:description" id="og-desc" content="تطبيق أندرويد لتنزيل ملفات محتوى Suno وحفظها في المكتبة ومشاركتها بسهولة.">
+    <meta property="og:title" id="og-title" content="تنزيل اغاني سونو مجانا — تحميل الاغاني مجانا">
+    <meta property="og:description" id="og-desc" content="تنزيل اغاني سونو مجانا وتحميل الاغاني مجانا بصيغة صوت فقط للأندرويد، وحفظها في مكتبة التطبيق ومشاركتها.">
     <meta property="og:image" content="https://servicesgeneral.github.io/Sunw3/Screenshot_20261122_190236.jpg">
     <meta property="og:url" content="https://servicesgeneral.github.io/Sunw3/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,8 +155,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 14px;
-            min-height: 70px;
+            gap: 12px;
+            min-height: 74px;
+            padding-block: 8px;
         }
 
         .brand-logo {
@@ -165,9 +166,7 @@
             gap: 11px;
             text-decoration: none;
             color: var(--text-primary);
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: -0.01em;
+            min-width: 0;
         }
 
         .brand-mark {
@@ -182,10 +181,31 @@
             flex-shrink: 0;
         }
 
+        .brand-text-wrap {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .brand-main-title {
+            font-weight: 800;
+            font-size: clamp(0.95rem, 2.3vw, 1.15rem);
+            line-height: 1.25;
+            color: var(--text-primary);
+        }
+
+        .brand-sub-title {
+            font-weight: 600;
+            font-size: clamp(0.76rem, 1.8vw, 0.86rem);
+            line-height: 1.25;
+            color: var(--accent-orange);
+        }
+
         .header-controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            flex-shrink: 0;
         }
 
         .control-select {
@@ -195,9 +215,9 @@
             color: var(--text-primary);
             border: 1px solid var(--border-strong);
             border-radius: var(--radius-sm);
-            padding: 8px 14px;
+            padding: 8px 12px;
             font-family: inherit;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition-fast), var(--transition-theme);
@@ -208,8 +228,8 @@
         }
 
         .theme-toggle {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: var(--radius-sm);
             border: 1px solid var(--border-strong);
             background: var(--bg-card);
@@ -686,7 +706,10 @@
                         <path d="M3 12h3l2-6 4 12 2-6h7"></path>
                     </svg>
                 </span>
-                <span>WavePulse</span>
+                <span class="brand-text-wrap">
+                    <span class="brand-main-title" id="headerTitle">تنزيل اغاني سونو مجانا</span>
+                    <span class="brand-sub-title" id="headerSub">تحميل الاغاني مجانا</span>
+                </span>
             </a>
 
             <div class="header-controls">
@@ -729,7 +752,7 @@
                         <span class="accent-text">تنزيل أغاني سونو</span> بسهولة مع WavePulse
                     </h1>
                     <p class="hero-desc" id="heroDesc">
-                        تطبيق أندرويد يتيح لك التعامل مع روابط المحتوى الموسيقي من Suno، واستعراض الخيارات المتاحة، وتنزيل الملفات وحفظها في مكتبة التطبيق ومشاركتها بوضوح وسلاسة.
+                        تطبيق أندرويد يتيح لك التعامل مع روابط المحتوى الصوتي من Suno، واستعراض الملفات الصوتية المتاحة، وتنزيلها وحفظها في مكتبة التطبيق ومشاركتها.
                     </p>
                     <div class="hero-actions">
                         <a href="https://github.com/Servicesgeneral/Sunw3/raw/main/WavePulse-debug.apk" class="btn-primary-apk" id="downloadBtn" download="WavePulse-debug.apk">
@@ -800,7 +823,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2 class="section-title" id="featuresTitle">مميزات WavePulse</h2>
-                    <p class="section-subtitle" id="featuresSub">أدوات عملية مصممة لتنظيم روابط Suno والملفات بوضوح.</p>
+                    <p class="section-subtitle" id="featuresSub">أدوات عملية مصممة لتنظيم روابط Suno والملفات الصوتية بوضوح.</p>
                 </div>
 
                 <div class="features-grid" id="featuresGrid"></div>
@@ -812,7 +835,7 @@
             <div class="container">
                 <div class="section-header reveal">
                     <h2 class="section-title" id="stepsTitle">طريقة الاستخدام</h2>
-                    <p class="section-subtitle" id="stepsSub">ثلاث خطوات بسيطة للوصول إلى ملفاتك وحفظها.</p>
+                    <p class="section-subtitle" id="stepsSub">ثلاث خطوات بسيطة للوصول إلى ملفاتك الصوتية وحفظها.</p>
                 </div>
 
                 <div class="steps-grid" id="stepsGrid"></div>
@@ -846,11 +869,13 @@
             const I18N = {
                 ar: {
                     dir: "rtl",
-                    pageTitle: "WavePulse — تنزيل أغاني سونو بسهولة",
-                    metaDesc: "تنزيل أغاني سونو بسهولة مع WavePulse. تطبيق أندرويد للتعامل مع روابط Suno، استعراض المحتوى، تنزيل الملفات وحفظها في المكتبة ومشاركتها.",
+                    headerTitle: "تنزيل اغاني سونو مجانا",
+                    headerSub: "تحميل الاغاني مجانا",
+                    pageTitle: "تنزيل اغاني سونو مجانا — تحميل الاغاني مجانا (صوت فقط)",
+                    metaDesc: "تنزيل اغاني سونو مجانا وتحميل الاغاني مجانا بصيغة صوت فقط مع تطبيق WavePulse للأندرويد. تعامل مع روابط سونو، استعرض الملفات الصوتية المتاحة، نزّلها واحفظها في المكتبة وشاركها.",
                     heroHighlight: "تنزيل أغاني سونو",
                     heroRest: " بسهولة مع WavePulse",
-                    heroDesc: "تطبيق أندرويد يتيح لك التعامل مع روابط المحتوى الموسيقي من Suno، واستعراض المحتوى المتاح، وتنزيل الملفات وحفظها في مكتبة التطبيق ومشاركتها.",
+                    heroDesc: "تطبيق أندرويد يتيح لك التعامل مع روابط المحتوى الصوتي من Suno، واستعراض الملفات الصوتية المتاحة، وتنزيلها وحفظها في مكتبة التطبيق ومشاركتها.",
                     downloadText: "تحميل APK",
                     exploreText: "تعرّف على واجهة التطبيق",
                     showcaseTitle: "تعرّف على واجهة التطبيق",
@@ -860,7 +885,7 @@
                     capLibrary: "مكتبة الملفات",
                     capSettings: "إعدادات التطبيق",
                     featuresTitle: "مميزات التطبيق",
-                    featuresSub: "كل ما تحتاجه للتعامل مع روابط Suno وإدارة ملفاتك بسهولة.",
+                    featuresSub: "كل ما تحتاجه لتحميل أغنية من رابط سونو بصيغة صوتية وإدارة ملفاتك بسهولة.",
                     stepsTitle: "طريقة الاستخدام",
                     stepsSub: "ثلاث خطوات مباشرة للبدء.",
                     faqTitle: "الأسئلة الشائعة",
@@ -868,43 +893,43 @@
                     themeAria: "تبديل الوضع الليلي والنهاري",
                     langAria: "اختيار اللغة",
                     features: [
-                        { title: "سهولة التعامل مع الروابط", desc: "إدخال ولصق روابط المحتوى من Suno بسرعة ومباشرة." },
-                        { title: "تنزيل الملفات بطريقة سهلة", desc: "تنزيل الملفات المتاحة بخطوات واضحة دون تعقيد." },
-                        { title: "معاينة المحتوى المتاح", desc: "استعراض تفاصيل وخيارات الملفات قبل الحفظ." },
-                        { title: "حفظ الملفات داخل مكتبة التطبيق", desc: "تنظيم الملفات التي تم تنزيلها والوصول إليها من مكان واحد." },
-                        { title: "مشاركة الملفات", desc: "مشاركة ملفاتك المحفوظة بسهولة عبر تطبيقات جهازك." },
+                        { title: "سهولة التعامل مع الروابط", desc: "إدخال ولصق روابط المحتوى الصوتي من Suno بسرعة ومباشرة." },
+                        { title: "تنزيل الملفات بطريقة سهلة", desc: "تنزيل الملفات الصوتية المتاحة بخطوات واضحة دون تعقيد." },
+                        { title: "معاينة المحتوى المتاح", desc: "استعراض تفاصيل وخيارات الملفات الصوتية قبل الحفظ." },
+                        { title: "حفظ الملفات داخل مكتبة التطبيق", desc: "تنظيم الملفات الصوتية التي تم تنزيلها والوصول إليها من مكان واحد." },
+                        { title: "مشاركة الملفات", desc: "مشاركة ملفاتك الصوتية المحفوظة بسهولة عبر تطبيقات جهازك." },
                         { title: "واجهة سهلة الاستخدام", desc: "تصميم عملي وواضح يركّز على سرعة الوصول للأدوات." },
-                        { title: "دعم خيارات وإعدادات متعددة", desc: "تخصيص المظهر واللغة وخيارات التنزيل حسب تفضيلك." }
+                        { title: "دعم خيارات وإعدادات متعددة", desc: "تخصيص المظهر واللغة وخيارات التنزيل الصوتي حسب تفضيلك." }
                     ],
                     steps: [
-                        "انسخ رابط المحتوى الذي تريد التعامل معه.",
+                        "انسخ رابط المحتوى الصوتي الذي تريد التعامل معه.",
                         "افتح WavePulse وأدخل الرابط.",
-                        "استعرض الخيارات المتاحة ثم قم بتنزيل الملف وحفظه."
+                        "استعرض الخيارات الصوتية المتاحة ثم قم بتنزيل الملف وحفظه."
                     ],
                     faqs: [
                         {
                             q: "ما هو تطبيق WavePulse؟",
-                            a: "تطبيق أندرويد مستقل يساعدك على التعامل مع روابط المحتوى من Suno، واستعراض الخيارات، وتنزيل الملفات وحفظها في مكتبة التطبيق ومشاركتها."
+                            a: "تطبيق أندرويد مستقل يساعدك على التعامل مع روابط المحتوى الصوتي من Suno، واستعراض الخيارات، وتنزيل الملفات الصوتية وحفظها في مكتبة التطبيق ومشاركتها."
                         },
                         {
                             q: "كيف أستخدم التطبيق؟",
-                            a: "انسخ رابط المحتوى، ثم افتح WavePulse وأدخل الرابط، واستعرض الخيارات المتاحة لتنزيل الملف وحفظه."
+                            a: "انسخ رابط المحتوى الصوتي، ثم افتح WavePulse وأدخل الرابط، واستعرض الخيارات المتاحة لتنزيل الملف الصوتي وحفظه."
                         },
                         {
                             q: "هل التطبيق مجاني؟",
-                            a: "نعم، يمكنك تحميل ملف APK وتجربة ميزات التطبيق المتاحة مجانًا."
+                            a: "نعم، يمكنك تحميل ملف APK وتجربة ميزات التنزيل الصوتي المتاحة مجانًا."
                         },
                         {
                             q: "هل يحتاج التطبيق إلى تسجيل حساب؟",
-                            a: "لا يتطلب التطبيق إنشاء حساب للبدء في إدخال الروابط وتنزيل الملفات."
+                            a: "لا يتطلب التطبيق إنشاء حساب للبدء في إدخال الروابط وتنزيل الملفات الصوتية."
                         },
                         {
                             q: "أين أجد الملفات التي تم تنزيلها؟",
-                            a: "تجد الملفات المحفوظة داخل قسم مكتبة الملفات في التطبيق وكذلك في ذاكرة جهازك."
+                            a: "تجد الملفات الصوتية المحفوظة داخل قسم مكتبة الملفات في التطبيق وكذلك في ذاكرة جهازك."
                         },
                         {
                             q: "كيف يمكنني مشاركة الملفات؟",
-                            a: "يمكنك مشاركة الملفات المحفوظة من مكتبة التطبيق مباشرة عبر خيارات المشاركة في أندرويد."
+                            a: "يمكنك مشاركة الملفات الصوتية المحفوظة من مكتبة التطبيق مباشرة عبر خيارات المشاركة في أندرويد."
                         },
                         {
                             q: "كيف أقوم بتثبيت التطبيق على Android؟",
@@ -914,11 +939,13 @@
                 },
                 en: {
                     dir: "ltr",
-                    pageTitle: "WavePulse — Download Suno Songs Easily",
-                    metaDesc: "Download Suno songs easily with WavePulse. An Android app to work with Suno links, browse available content, download files, save them to the app library, and share them.",
+                    headerTitle: "Download Suno Songs Free",
+                    headerSub: "Free Audio Downloads",
+                    pageTitle: "Download Suno Songs Free — Free Audio Downloads",
+                    metaDesc: "Download Suno songs free with WavePulse for Android. Handle Suno audio links, browse available audio files, download them, save them in the app library, and share.",
                     heroHighlight: "Download Suno Songs",
                     heroRest: " Easily with WavePulse",
-                    heroDesc: "An Android app that lets you handle Suno music content links, browse available content, download files, save them in the app library, and share them.",
+                    heroDesc: "An Android app that lets you handle Suno audio links, browse available audio files, download them, save them in the app library, and share them.",
                     downloadText: "Download APK",
                     exploreText: "Explore App Interface",
                     showcaseTitle: "Explore App Interface",
@@ -928,7 +955,7 @@
                     capLibrary: "Files Library",
                     capSettings: "App Settings",
                     featuresTitle: "App Features",
-                    featuresSub: "Practical tools for working with Suno links and managing saved files.",
+                    featuresSub: "Practical audio tools for working with Suno links and managing saved files.",
                     stepsTitle: "How to Use",
                     stepsSub: "Three simple steps to get started.",
                     faqTitle: "Frequently Asked Questions",
@@ -936,43 +963,43 @@
                     themeAria: "Toggle dark and light mode",
                     langAria: "Select language",
                     features: [
-                        { title: "Easy Link Handling", desc: "Paste and enter Suno content links quickly and directly." },
-                        { title: "Simple File Downloads", desc: "Download available files in clear, straightforward steps." },
-                        { title: "Available Content Preview", desc: "Review available file details and options before saving." },
-                        { title: "Save to App Library", desc: "Keep downloaded files organized inside the built-in library." },
-                        { title: "Share Files", desc: "Share saved files easily through your device apps." },
+                        { title: "Easy Link Handling", desc: "Paste and enter Suno audio links quickly and directly." },
+                        { title: "Simple Audio Downloads", desc: "Download available audio files in clear, straightforward steps." },
+                        { title: "Available Content Preview", desc: "Review available audio details and options before saving." },
+                        { title: "Save to App Library", desc: "Keep downloaded audio files organized inside the built-in library." },
+                        { title: "Share Audio Files", desc: "Share saved audio files easily through your device apps." },
                         { title: "Easy-to-Use Interface", desc: "Clean, focused layout designed for quick access." },
-                        { title: "Multiple Options & Settings", desc: "Adjust appearance, language, and download preferences." }
+                        { title: "Multiple Options & Settings", desc: "Adjust appearance, language, and audio download preferences." }
                     ],
                     steps: [
-                        "Copy the link of the content you want to work with.",
+                        "Copy the link of the audio content you want to work with.",
                         "Open WavePulse and enter the link.",
-                        "Browse the available options, then download and save the file."
+                        "Browse the available audio options, then download and save the file."
                     ],
                     faqs: [
                         {
                             q: "What is WavePulse?",
-                            a: "WavePulse is an independent Android app that helps you handle Suno links, browse available options, download files, save them to the app library, and share them."
+                            a: "WavePulse is an independent Android app that helps you handle Suno audio links, browse available options, download audio files, save them to the app library, and share them."
                         },
                         {
                             q: "How do I use the app?",
-                            a: "Copy the content link, open WavePulse and enter the link, then browse the available options to download and save the file."
+                            a: "Copy the audio link, open WavePulse and enter the link, then browse the available options to download and save the audio file."
                         },
                         {
                             q: "Is the app free?",
-                            a: "Yes, you can download the APK and use the app's available features for free."
+                            a: "Yes, you can download the APK and use the app's available audio features for free."
                         },
                         {
                             q: "Does the app require an account?",
-                            a: "No account registration is required to enter links and download files."
+                            a: "No account registration is required to enter links and download audio files."
                         },
                         {
                             q: "Where can I find downloaded files?",
-                            a: "You can find saved files inside the app's files library as well as on your device storage."
+                            a: "You can find saved audio files inside the app's files library as well as on your device storage."
                         },
                         {
                             q: "How can I share files?",
-                            a: "You can share saved files from the library directly using Android's share menu."
+                            a: "You can share saved audio files from the library directly using Android's share menu."
                         },
                         {
                             q: "How do I install the app on Android?",
@@ -982,11 +1009,13 @@
                 },
                 tr: {
                     dir: "ltr",
-                    pageTitle: "WavePulse — Suno Şarkılarını Kolayca İndir",
-                    metaDesc: "WavePulse ile Suno şarkılarını kolayca indirin. Suno bağlantılarını yönetmek, içerikleri incelemek, dosyaları indirmek, kitaplığa kaydetmek ve paylaşmak için Android uygulaması.",
+                    headerTitle: "Suno Şarkılarını Ücretsiz İndir",
+                    headerSub: "Ücretsiz Ses İndirme",
+                    pageTitle: "Suno Şarkılarını Ücretsiz İndir — Ücretsiz Ses İndirme",
+                    metaDesc: "WavePulse ile Suno şarkılarını ücretsiz indirin. Suno ses bağlantılarını yönetmek, ses dosyalarını incelemek, indirmek, kitaplığa kaydetmek ve paylaşmak için Android uygulaması.",
                     heroHighlight: "Suno Şarkılarını İndir",
                     heroRest: " WavePulse ile Kolayca",
-                    heroDesc: "Suno müzik içerik bağlantılarını yönetmenize, mevcut içeriği incelemenize, dosyaları indirip uygulama kitaplığına kaydetmenize ve paylaşmanıza olanak tanıyan Android uygulaması.",
+                    heroDesc: "Suno ses bağlantılarını yönetmenize, mevcut ses dosyalarını incelemenize, indirip uygulama kitaplığına kaydetmenize ve paylaşmanıza olanak tanıyan Android uygulaması.",
                     downloadText: "APK İndir",
                     exploreText: "Uygulama Arayüzünü İncele",
                     showcaseTitle: "Uygulama Arayüzünü İncele",
@@ -996,7 +1025,7 @@
                     capLibrary: "Dosya Kitaplığı",
                     capSettings: "Uygulama Ayarları",
                     featuresTitle: "Uygulama Özellikleri",
-                    featuresSub: "Suno bağlantılarıyla çalışmak ve dosyaları yönetmek için pratik özellikler.",
+                    featuresSub: "Suno ses bağlantılarıyla çalışmak ve dosyaları yönetmek için pratik özellikler.",
                     stepsTitle: "Nasıl Kullanılır?",
                     stepsSub: "Başlamak için üç basit adım.",
                     faqTitle: "Sıkça Sorulan Sorular",
@@ -1004,43 +1033,43 @@
                     themeAria: "Karanlık ve aydınlık modu değiştir",
                     langAria: "Dil seçin",
                     features: [
-                        { title: "Kolay Bağlantı Yönetimi", desc: "Suno içerik bağlantılarını hızlı ve doğrudan yapıştırın." },
-                        { title: "Kolay Dosya İndirme", desc: "Mevcut dosyaları sade ve anlaşılır adımlarla indirin." },
-                        { title: "Mevcut İçerik Önizleme", desc: "Kaydetmeden önce sunulan dosya seçeneklerini inceleyin." },
-                        { title: "Kitaplığa Kaydetme", desc: "İndirilen dosyaları uygulama kitaplığında düzenli tutun." },
-                        { title: "Dosya Paylaşımı", desc: "Kaydedilen dosyaları cihazınızdaki uygulamalarla paylaşın." },
+                        { title: "Kolay Bağlantı Yönetimi", desc: "Suno ses bağlantılarını hızlı ve doğrudan yapıştırın." },
+                        { title: "Kolay Ses İndirme", desc: "Mevcut ses dosyalarını sade ve anlaşılır adımlarla indirin." },
+                        { title: "Mevcut İçerik Önizleme", desc: "Kaydetmeden önce sunulan ses seçeneklerini inceleyin." },
+                        { title: "Kitaplığa Kaydetme", desc: "İndirilen ses dosyalarını uygulama kitaplığında düzenli tutun." },
+                        { title: "Ses Dosyası Paylaşımı", desc: "Kaydedilen ses dosyalarını cihazınızdaki uygulamalarla paylaşın." },
                         { title: "Kullanımı Kolay Arayüz", desc: "Hızlı erişim için sade ve düzenli tasarım." },
-                        { title: "Çoklu Seçenek ve Ayarlar", desc: "Görünüm, dil ve indirme tercihlerini yapılandırın." }
+                        { title: "Çoklu Seçenek ve Ayarlar", desc: "Görünüm, dil ve ses indirme tercihlerini yapılandırın." }
                     ],
                     steps: [
-                        "İşlem yapmak istediğiniz içeriğin bağlantısını kopyalayın.",
+                        "İşlem yapmak istediğiniz ses içeriğinin bağlantısını kopyalayın.",
                         "WavePulse'u açın ve bağlantıyı girin.",
-                        "Mevcut seçenekleri inceleyin, ardından dosyayı indirip kaydedin."
+                        "Mevcut ses seçeneklerini inceleyin, ardından dosyayı indirip kaydedin."
                     ],
                     faqs: [
                         {
                             q: "WavePulse nedir?",
-                            a: "Suno bağlantılarıyla çalışmanıza, seçenekleri incelemenize, dosyaları indirip kitaplığa kaydetmenize ve paylaşmanıza yardımcı olan bağımsız bir Android uygulamasıdır."
+                            a: "Suno ses bağlantılarıyla çalışmanıza, seçenekleri incelemenize, ses dosyalarını indirip kitaplığa kaydetmenize ve paylaşmanıza yardımcı olan bağımsız bir Android uygulamasıdır."
                         },
                         {
                             q: "Uygulamayı nasıl kullanırım?",
-                            a: "İçerik bağlantısını kopyalayın, WavePulse'u açıp bağlantıyı girin ve dosyayı indirip kaydetmek için sunulan seçenekleri inceleyin."
+                            a: "Ses bağlantısını kopyalayın, WavePulse'u açıp bağlantıyı girin ve ses dosyasını indirip kaydetmek için sunulan seçenekleri inceleyin."
                         },
                         {
                             q: "Uygulama ücretsiz mi?",
-                            a: "Evet, APK dosyasını indirebilir ve uygulamanın sunduğu özellikleri ücretsiz kullanabilirsiniz."
+                            a: "Evet, APK dosyasını indirebilir ve uygulamanın sunduğu ses özelliklerini ücretsiz kullanabilirsiniz."
                         },
                         {
                             q: "Hesap açmak gerekiyor mu?",
-                            a: "Bağlantı girmek ve dosya indirmek için hesap oluşturmanız gerekmez."
+                            a: "Bağlantı girmek ve ses dosyası indirmek için hesap oluşturmanız gerekmez."
                         },
                         {
                             q: "İndirilen dosyaları nerede bulurum?",
-                            a: "Kaydedilen dosyaları uygulamadaki dosya kitaplığında ve cihaz depolamanızda bulabilirsiniz."
+                            a: "Kaydedilen ses dosyalarını uygulamadaki dosya kitaplığında ve cihaz depolamanızda bulabilirsiniz."
                         },
                         {
                             q: "Dosyaları nasıl paylaşabilirim?",
-                            a: "Kitaplıktaki dosyaları Android paylaş menüsü üzerinden doğrudan paylaşabilirsiniz."
+                            a: "Kitaplıktaki ses dosyalarını Android paylaş menüsü üzerinden doğrudan paylaşabilirsiniz."
                         },
                         {
                             q: "Android'e nasıl yüklerim?",
@@ -1050,11 +1079,13 @@
                 },
                 ru: {
                     dir: "ltr",
-                    pageTitle: "WavePulse — Легко скачивайте песни Suno",
-                    metaDesc: "Легко скачивайте песни Suno с WavePulse. Приложение для Android для работы со ссылками Suno, просмотра контента, скачивания файлов, сохранения в библиотеке и отправки.",
+                    headerTitle: "Скачать песни Suno бесплатно",
+                    headerSub: "Бесплатное скачивание аудио",
+                    pageTitle: "Скачать песни Suno бесплатно — Бесплатное скачивание аудио",
+                    metaDesc: "Скачайте песни Suno бесплатно с WavePulse. Приложение для Android для работы со ссылками на аудио Suno, просмотра файлов, скачивания, сохранения в библиотеке и отправки.",
                     heroHighlight: "Скачивайте песни Suno",
                     heroRest: " легко с WavePulse",
-                    heroDesc: "Приложение для Android, позволяющее работать со ссылками на музыкальный контент Suno, просматривать доступный контент, скачивать файлы, сохранять их в библиотеке и делиться ими.",
+                    heroDesc: "Приложение для Android, позволяющее работать со ссылками на аудио Suno, просматривать доступные аудиофайлы, скачивать их, сохранять в библиотеке и делиться ими.",
                     downloadText: "Скачать APK",
                     exploreText: "Посмотреть интерфейс",
                     showcaseTitle: "Посмотреть интерфейс",
@@ -1064,7 +1095,7 @@
                     capLibrary: "Библиотека файлов",
                     capSettings: "Настройки приложения",
                     featuresTitle: "Возможности приложения",
-                    featuresSub: "Удобные инструменты для работы со ссылками Suno и файлами.",
+                    featuresSub: "Удобные инструменты для работы со ссылками Suno и аудиофайлами.",
                     stepsTitle: "Как использовать",
                     stepsSub: "Три простых шага для начала.",
                     faqTitle: "Частые вопросы",
@@ -1072,43 +1103,43 @@
                     themeAria: "Переключить светлую и тёмную тему",
                     langAria: "Выберите язык",
                     features: [
-                        { title: "Удобная работа со ссылками", desc: "Быстро вставляйте и вводите ссылки на контент Suno." },
-                        { title: "Простое скачивание файлов", desc: "Загружайте доступные файлы без лишних шагов." },
-                        { title: "Обзор доступного контента", desc: "Просматривайте доступные варианты перед сохранением." },
-                        { title: "Сохранение в библиотеку", desc: "Храните загруженные файлы в библиотеке приложения." },
-                        { title: "Обмен файлами", desc: "Делитесь сохранёнными файлами через приложения устройства." },
+                        { title: "Удобная работа со ссылками", desc: "Быстро вставляйте и вводите ссылки на аудио Suno." },
+                        { title: "Простое скачивание аудио", desc: "Загружайте доступные аудиофайлы без лишних шагов." },
+                        { title: "Обзор доступного контента", desc: "Просматривайте доступные аудиоварианты перед сохранением." },
+                        { title: "Сохранение в библиотеку", desc: "Храните загруженные аудиофайлы в библиотеке приложения." },
+                        { title: "Обмен файлами", desc: "Делитесь сохранёнными аудиофайлами через приложения устройства." },
                         { title: "Понятный интерфейс", desc: "Аккуратный дизайн для быстрого доступа к функциям." },
-                        { title: "Гибкие настройки", desc: "Настраивайте оформление, язык и параметры загрузки." }
+                        { title: "Гибкие настройки", desc: "Настраивайте оформление, язык и параметры загрузки аудио." }
                     ],
                     steps: [
-                        "Скопируйте ссылку на нужный контент.",
+                        "Скопируйте ссылку на нужный аудиоконтент.",
                         "Откройте WavePulse и вставьте ссылку.",
-                        "Просмотрите доступные варианты, затем скачайте и сохраните файл."
+                        "Просмотрите доступные аудиоварианты, затем скачайте и сохраните файл."
                     ],
                     faqs: [
                         {
                             q: "Что такое WavePulse?",
-                            a: "Это самостоятельное приложение для Android, которое помогает работать со ссылками Suno, просматривать варианты, скачивать файлы, сохранять их в библиотеке и делиться ими."
+                            a: "Это самостоятельное приложение для Android, которое помогает работать со ссылками на аудио Suno, просматривать варианты, скачивать аудиофайлы, сохранять их в библиотеке и делиться ими."
                         },
                         {
                             q: "Как пользоваться приложением?",
-                            a: "Скопируйте ссылку на контент, откройте WavePulse, вставьте ссылку и выберите подходящий вариант для загрузки и сохранения файла."
+                            a: "Скопируйте ссылку на аудио, откройте WavePulse, вставьте ссылку и выберите подходящий вариант для загрузки и сохранения аудиофайла."
                         },
                         {
                             q: "Приложение бесплатное?",
-                            a: "Да, вы можете скачать APK-файл и пользоваться доступными функциями приложения бесплатно."
+                            a: "Да, вы можете скачать APK-файл и пользоваться доступными функциями скачивания аудио бесплатно."
                         },
                         {
                             q: "Нужна ли регистрация аккаунта?",
-                            a: "Для ввода ссылок и загрузки файлов создавать аккаунт не требуется."
+                            a: "Для ввода ссылок и загрузки аудиофайлов создавать аккаунт не требуется."
                         },
                         {
                             q: "Где найти скачанные файлы?",
-                            a: "Сохранённые файлы доступны в библиотеке внутри приложения и в памяти устройства."
+                            a: "Сохранённые аудиофайлы доступны в библиотеке внутри приложения и в памяти устройства."
                         },
                         {
                             q: "Как поделиться файлами?",
-                            a: "Вы можете отправить сохранённые файлы из библиотеки через стандартное меню «Поделиться» на Android."
+                            a: "Вы можете отправить сохранённые аудиофайлы из библиотеки через стандартное меню «Поделиться» на Android."
                         },
                         {
                             q: "Как установить приложение на Android?",
@@ -1118,11 +1149,13 @@
                 },
                 fr: {
                     dir: "ltr",
-                    pageTitle: "WavePulse — Téléchargez facilement les chansons Suno",
-                    metaDesc: "Téléchargez facilement les chansons Suno avec WavePulse. Application Android pour gérer les liens Suno, consulter le contenu, télécharger des fichiers, les enregistrer dans la bibliothèque et les partager.",
+                    headerTitle: "Télécharger chansons Suno gratuitement",
+                    headerSub: "Téléchargement audio gratuit",
+                    pageTitle: "Télécharger chansons Suno gratuitement — Téléchargement audio gratuit",
+                    metaDesc: "Téléchargez facilement les chansons Suno avec WavePulse. Application Android pour gérer les liens audio Suno, consulter les fichiers audio, télécharger, enregistrer dans la bibliothèque et partager.",
                     heroHighlight: "Téléchargez les chansons Suno",
                     heroRest: " facilement avec WavePulse",
-                    heroDesc: "Une application Android permettant de gérer les liens de contenu musical Suno, parcourir le contenu disponible, télécharger des fichiers, les enregistrer dans la bibliothèque et les partager.",
+                    heroDesc: "Une application Android permettant de gérer les liens audio Suno, parcourir les fichiers audio disponibles, les télécharger, les enregistrer dans la bibliothèque et les partager.",
                     downloadText: "Télécharger l'APK",
                     exploreText: "Découvrir l'interface",
                     showcaseTitle: "Découvrir l'interface",
@@ -1132,7 +1165,7 @@
                     capLibrary: "Bibliothèque de fichiers",
                     capSettings: "Paramètres de l'application",
                     featuresTitle: "Fonctionnalités",
-                    featuresSub: "Des outils pratiques pour gérer vos liens Suno et vos fichiers.",
+                    featuresSub: "Des outils audio pratiques pour gérer vos liens Suno et vos fichiers.",
                     stepsTitle: "Comment utiliser l'application",
                     stepsSub: "Trois étapes simples pour commencer.",
                     faqTitle: "Questions fréquentes",
@@ -1140,43 +1173,43 @@
                     themeAria: "Basculer entre mode sombre et clair",
                     langAria: "Choisir la langue",
                     features: [
-                        { title: "Gestion simple des liens", desc: "Collez et saisissez rapidement les liens de contenu Suno." },
-                        { title: "Téléchargement facile", desc: "Téléchargez les fichiers disponibles en quelques gestes clairs." },
-                        { title: "Aperçu du contenu disponible", desc: "Consultez les options disponibles avant d'enregistrer." },
-                        { title: "Bibliothèque intégrée", desc: "Conservez vos fichiers téléchargés dans la bibliothèque de l'app." },
-                        { title: "Partage de fichiers", desc: "Partagez facilement vos fichiers enregistrés depuis l'appareil." },
+                        { title: "Gestion simple des liens", desc: "Collez et saisissez rapidement les liens audio Suno." },
+                        { title: "Téléchargement audio facile", desc: "Téléchargez les fichiers audio disponibles en quelques gestes clairs." },
+                        { title: "Aperçu du contenu disponible", desc: "Consultez les options audio disponibles avant d'enregistrer." },
+                        { title: "Bibliothèque intégrée", desc: "Conservez vos fichiers audio téléchargés dans la bibliothèque de l'app." },
+                        { title: "Partage de fichiers audio", desc: "Partagez facilement vos fichiers audio enregistrés depuis l'appareil." },
                         { title: "Interface intuitive", desc: "Une mise en page claire pensée pour un accès rapide." },
-                        { title: "Options et réglages variés", desc: "Personnalisez le thème, la langue et les préférences." }
+                        { title: "Options et réglages variés", desc: "Personnalisez le thème, la langue et les préférences audio." }
                     ],
                     steps: [
-                        "Copiez le lien du contenu souhaité.",
+                        "Copiez le lien du contenu audio souhaité.",
                         "Ouvrez WavePulse et saisissez le lien.",
-                        "Consultez les options disponibles, puis téléchargez et enregistrez le fichier."
+                        "Consultez les options audio disponibles, puis téléchargez et enregistrez le fichier."
                     ],
                     faqs: [
                         {
                             q: "Qu'est-ce que WavePulse ?",
-                            a: "C'est une application Android indépendante qui aide à gérer les liens Suno, consulter les options disponibles, télécharger des fichiers, les enregistrer dans la bibliothèque et les partager."
+                            a: "C'est une application Android indépendante qui aide à gérer les liens audio Suno, consulter les options disponibles, télécharger des fichiers audio, les enregistrer dans la bibliothèque et les partager."
                         },
                         {
                             q: "Comment utiliser l'application ?",
-                            a: "Copiez le lien du contenu, ouvrez WavePulse et saisissez le lien, puis parcourez les options pour télécharger et enregistrer le fichier."
+                            a: "Copiez le lien audio, ouvrez WavePulse et saisissez le lien, puis parcourez les options pour télécharger et enregistrer le fichier audio."
                         },
                         {
                             q: "L'application est-elle gratuite ?",
-                            a: "Oui, vous pouvez télécharger le fichier APK et utiliser gratuitement les fonctionnalités disponibles."
+                            a: "Oui, vous pouvez télécharger le fichier APK et utiliser gratuitement les fonctionnalités audio disponibles."
                         },
                         {
                             q: "Faut-il créer un compte ?",
-                            a: "Aucun compte n'est requis pour saisir des liens et télécharger des fichiers."
+                            a: "Aucun compte n'est requis pour saisir des liens et télécharger des fichiers audio."
                         },
                         {
                             q: "Où retrouver les fichiers téléchargés ?",
-                            a: "Les fichiers enregistrés se trouvent dans la bibliothèque de l'application ainsi que dans le stockage de votre appareil."
+                            a: "Les fichiers audio enregistrés se trouvent dans la bibliothèque de l'application ainsi que dans le stockage de votre appareil."
                         },
                         {
                             q: "Comment partager des fichiers ?",
-                            a: "Vous pouvez partager les fichiers enregistrés depuis la bibliothèque via le menu de partage Android."
+                            a: "Vous pouvez partager les fichiers audio enregistrés depuis la bibliothèque via le menu de partage Android."
                         },
                         {
                             q: "Comment installer l'application sur Android ?",
@@ -1186,11 +1219,13 @@
                 },
                 es: {
                     dir: "ltr",
-                    pageTitle: "WavePulse — Descarga canciones de Suno fácilmente",
-                    metaDesc: "Descarga canciones de Suno fácilmente con WavePulse. Aplicación Android para gestionar enlaces de Suno, explorar contenido, descargar archivos, guardarlos en la biblioteca y compartirlos.",
+                    headerTitle: "Descargar canciones de Suno gratis",
+                    headerSub: "Descarga de audio gratis",
+                    pageTitle: "Descargar canciones de Suno gratis — Descarga de audio gratis",
+                    metaDesc: "Descarga canciones de Suno gratis con WavePulse. Aplicación Android para gestionar enlaces de audio de Suno, explorar archivos de audio, descargar, guardar en la biblioteca y compartir.",
                     heroHighlight: "Descarga canciones de Suno",
                     heroRest: " fácilmente con WavePulse",
-                    heroDesc: "Una aplicación Android que te permite gestionar enlaces de contenido musical de Suno, explorar el contenido disponible, descargar archivos, guardarlos en la biblioteca y compartirlos.",
+                    heroDesc: "Una aplicación Android que te permite gestionar enlaces de audio de Suno, explorar los archivos de audio disponibles, descargarlos, guardarlos en la biblioteca y compartirlos.",
                     downloadText: "Descargar APK",
                     exploreText: "Explorar la interfaz",
                     showcaseTitle: "Explorar la interfaz",
@@ -1200,7 +1235,7 @@
                     capLibrary: "Biblioteca de archivos",
                     capSettings: "Ajustes de la aplicación",
                     featuresTitle: "Funciones de la aplicación",
-                    featuresSub: "Herramientas prácticas para trabajar con enlaces de Suno y archivos.",
+                    featuresSub: "Herramientas prácticas de audio para trabajar con enlaces de Suno y archivos.",
                     stepsTitle: "Cómo usarla",
                     stepsSub: "Tres pasos sencillos para empezar.",
                     faqTitle: "Preguntas frecuentes",
@@ -1208,43 +1243,43 @@
                     themeAria: "Cambiar entre modo oscuro y claro",
                     langAria: "Seleccionar idioma",
                     features: [
-                        { title: "Gestión sencilla de enlaces", desc: "Pega e introduce enlaces de contenido de Suno con rapidez." },
-                        { title: "Descarga fácil de archivos", desc: "Descarga los archivos disponibles en pasos claros." },
-                        { title: "Vista de contenido disponible", desc: "Revisa las opciones disponibles antes de guardar." },
-                        { title: "Biblioteca en la app", desc: "Guarda y organiza tus archivos descargados en un solo lugar." },
-                        { title: "Compartir archivos", desc: "Comparte tus archivos guardados desde las apps del dispositivo." },
+                        { title: "Gestión sencilla de enlaces", desc: "Pega e introduce enlaces de audio de Suno con rapidez." },
+                        { title: "Descarga fácil de audio", desc: "Descarga los archivos de audio disponibles en pasos claros." },
+                        { title: "Vista de contenido disponible", desc: "Revisa las opciones de audio disponibles antes de guardar." },
+                        { title: "Biblioteca en la app", desc: "Guarda y organiza tus archivos de audio descargados en un solo lugar." },
+                        { title: "Compartir archivos de audio", desc: "Comparte tus archivos de audio guardados desde las apps del dispositivo." },
                         { title: "Interfaz fácil de usar", desc: "Diseño limpio pensado para acceder rápido a cada función." },
-                        { title: "Opciones y ajustes variados", desc: "Adapta el tema, el idioma y las preferencias de descarga." }
+                        { title: "Opciones y ajustes variados", desc: "Adapta el tema, el idioma y las preferencias de audio." }
                     ],
                     steps: [
-                        "Copia el enlace del contenido con el que quieres trabajar.",
+                        "Copia el enlace del contenido de audio con el que quieres trabajar.",
                         "Abre WavePulse e introduce el enlace.",
-                        "Explora las opciones disponibles y luego descarga y guarda el archivo."
+                        "Explora las opciones de audio disponibles y luego descarga y guarda el archivo."
                     ],
                     faqs: [
                         {
                             q: "¿Qué es WavePulse?",
-                            a: "Es una aplicación Android independiente que te ayuda a gestionar enlaces de Suno, explorar opciones disponibles, descargar archivos, guardarlos en la biblioteca y compartirlos."
+                            a: "Es una aplicación Android independiente que te ayuda a gestionar enlaces de audio de Suno, explorar opciones disponibles, descargar archivos de audio, guardarlos en la biblioteca y compartirlos."
                         },
                         {
                             q: "¿Cómo uso la aplicación?",
-                            a: "Copia el enlace del contenido, abre WavePulse e introduce el enlace, y revisa las opciones disponibles para descargar y guardar el archivo."
+                            a: "Copia el enlace de audio, abre WavePulse e introduce el enlace, y revisa las opciones disponibles para descargar y guardar el archivo de audio."
                         },
                         {
                             q: "¿La aplicación es gratuita?",
-                            a: "Sí, puedes descargar el APK y usar gratis las funciones disponibles de la aplicación."
+                            a: "Sí, puedes descargar el APK y usar gratis las funciones de audio disponibles de la aplicación."
                         },
                         {
                             q: "¿Necesita registro de cuenta?",
-                            a: "No necesitas crear una cuenta para introducir enlaces y descargar archivos."
+                            a: "No necesitas crear una cuenta para introducir enlaces y descargar archivos de audio."
                         },
                         {
                             q: "¿Dónde encuentro los archivos descargados?",
-                            a: "Encontrarás los archivos guardados en la biblioteca de la aplicación y en el almacenamiento de tu dispositivo."
+                            a: "Encontrarás los archivos de audio guardados en la biblioteca de la aplicación y en el almacenamiento de tu dispositivo."
                         },
                         {
                             q: "¿Cómo puedo compartir los archivos?",
-                            a: "Puedes compartir los archivos guardados desde la biblioteca mediante el menú para compartir de Android."
+                            a: "Puedes compartir los archivos de audio guardados desde la biblioteca mediante el menú para compartir de Android."
                         },
                         {
                             q: "¿Cómo instalo la aplicación en Android?",
@@ -1254,11 +1289,13 @@
                 },
                 bn: {
                     dir: "ltr",
-                    pageTitle: "WavePulse — সহজে সুনো গান ডাউনলোড করুন",
-                    metaDesc: "WavePulse দিয়ে সহজে সুনো গান ডাউনলোড করুন। Suno লিংক পরিচালনা, কনটেন্ট দেখা, ফাইল ডাউনলোড, লাইব্রেরিতে সংরক্ষণ ও শেয়ার করার অ্যান্ড্রয়েড অ্যাপ।",
+                    headerTitle: "সুনো গান বিনামূল্যে ডাউনলোড করুন",
+                    headerSub: "বিনামূল্যে অডিও ডাউনলোড",
+                    pageTitle: "সুনো গান বিনামূল্যে ডাউনলোড করুন — বিনামূল্যে অডিও ডাউনলোড",
+                    metaDesc: "WavePulse দিয়ে সহজে সুনো গান ডাউনলোড করুন। Suno অডিও লিংক পরিচালনা, অডিও ফাইল দেখা, ডাউনলোড, লাইব্রেরিতে সংরক্ষণ ও শেয়ার করার অ্যান্ড্রয়েড অ্যাপ।",
                     heroHighlight: "সুনো গান ডাউনলোড করুন",
                     heroRest: " WavePulse দিয়ে সহজে",
-                    heroDesc: "এটি একটি অ্যান্ড্রয়েড অ্যাপ যা দিয়ে আপনি Suno মিউজিক কনটেন্ট লিংক নিয়ে কাজ করতে, উপলব্ধ কনটেন্ট দেখতে, ফাইল ডাউনলোড করে অ্যাপ লাইব্রেরিতে রাখতে এবং শেয়ার করতে পারবেন।",
+                    heroDesc: "এটি একটি অ্যান্ড্রয়েড অ্যাপ যা দিয়ে আপনি Suno অডিও লিংক নিয়ে কাজ করতে, উপলব্ধ অডিও ফাইল দেখতে, ডাউনলোড করে অ্যাপ লাইব্রেরিতে রাখতে এবং শেয়ার করতে পারবেন।",
                     downloadText: "APK ডাউনলোড করুন",
                     exploreText: "অ্যাপ ইন্টারফেস দেখুন",
                     showcaseTitle: "অ্যাপ ইন্টারফেস দেখুন",
@@ -1268,7 +1305,7 @@
                     capLibrary: "ফাইল লাইব্রেরি",
                     capSettings: "অ্যাপ সেটিংস",
                     featuresTitle: "অ্যাপের বৈশিষ্ট্য",
-                    featuresSub: "Suno লিংক ও সংরক্ষিত ফাইল ব্যবস্থাপনার সহজ সুবিধা।",
+                    featuresSub: "Suno অডিও লিংক ও সংরক্ষিত ফাইল ব্যবস্থাপনার সহজ সুবিধা।",
                     stepsTitle: "ব্যবহারের নিয়ম",
                     stepsSub: "শুরু করার তিনটি সহজ ধাপ।",
                     faqTitle: "সাধারণ জিজ্ঞাসা",
@@ -1276,43 +1313,43 @@
                     themeAria: "ডার্ক ও লাইট মোড পরিবর্তন করুন",
                     langAria: "ভাষা নির্বাচন করুন",
                     features: [
-                        { title: "সহজ লিংক ব্যবস্থাপনা", desc: "Suno কনটেন্ট লিংক দ্রুত পেস্ট ও যুক্ত করুন।" },
-                        { title: "সহজ ফাইল ডাউনলোড", desc: "উপলব্ধ ফাইলগুলো ঝামেলাহীনভাবে ডাউনলোড করুন।" },
-                        { title: "উপলব্ধ কনটেন্ট দেখা", desc: "সংরক্ষণের আগে উপলব্ধ অপশনগুলো যাচাই করুন।" },
-                        { title: "অ্যাপ লাইব্রেরিতে সংরক্ষণ", desc: "ডাউনলোড করা ফাইলগুলো অ্যাপের লাইব্রেরিতে গুছিয়ে রাখুন।" },
-                        { title: "ফাইল শেয়ার করার সুবিধা", desc: "সংরক্ষিত ফাইলগুলো ডিভাইসের অ্যাপ দিয়ে সহজে শেয়ার করুন।" },
+                        { title: "সহজ লিংক ব্যবস্থাপনা", desc: "Suno অডিও লিংক দ্রুত পেস্ট ও যুক্ত করুন।" },
+                        { title: "সহজ অডিও ডাউনলোড", desc: "উপলব্ধ অডিও ফাইলগুলো ঝামেলাহীনভাবে ডাউনলোড করুন।" },
+                        { title: "উপলব্ধ কনটেন্ট দেখা", desc: "সংরক্ষণের আগে উপলব্ধ অডিও অপশনগুলো যাচাই করুন।" },
+                        { title: "অ্যাপ লাইব্রেরিতে সংরক্ষণ", desc: "ডাউনলোড করা অডিও ফাইলগুলো অ্যাপের লাইব্রেরিতে গুছিয়ে রাখুন।" },
+                        { title: "অডিও ফাইল শেয়ার করার সুবিধা", desc: "সংরক্ষিত অডিও ফাইলগুলো ডিভাইসের অ্যাপ দিয়ে সহজে শেয়ার করুন।" },
                         { title: "সহজ ব্যবহারযোগ্য ইন্টারফেস", desc: "দ্রুত কাজের উপযোগী পরিচ্ছন্ন নকশা।" },
-                        { title: "একাধিক অপশন ও সেটিংস", desc: "থিম, ভাষা এবং ডাউনলোড পছন্দ ঠিক করুন।" }
+                        { title: "একাধিক অপশন ও সেটিংস", desc: "থিম, ভাষা এবং অডিও ডাউনলোড পছন্দ ঠিক করুন।" }
                     ],
                     steps: [
-                        "যে কনটেন্ট নিয়ে কাজ করতে চান তার লিংক কপি করুন।",
+                        "যে অডিও কনটেন্ট নিয়ে কাজ করতে চান তার লিংক কপি করুন।",
                         "WavePulse খুলে লিংকটি দিন।",
-                        "উপলব্ধ অপশনগুলো দেখে ফাইল ডাউনলোড করে সংরক্ষণ করুন।"
+                        "উপলব্ধ অডিও অপশনগুলো দেখে ফাইল ডাউনলোড করে সংরক্ষণ করুন।"
                     ],
                     faqs: [
                         {
                             q: "WavePulse কী?",
-                            a: "এটি একটি স্বতন্ত্র অ্যান্ড্রয়েড অ্যাপ যা Suno লিংক নিয়ে কাজ করতে, উপলব্ধ অপশন দেখতে, ফাইল ডাউনলোড করে লাইব্রেরিতে রাখতে এবং শেয়ার করতে সাহায্য করে।"
+                            a: "এটি একটি স্বতন্ত্র অ্যান্ড্রয়েড অ্যাপ যা Suno অডিও লিংক নিয়ে কাজ করতে, উপলব্ধ অপশন দেখতে, অডিও ফাইল ডাউনলোড করে লাইব্রেরিতে রাখতে এবং শেয়ার করতে সাহায্য করে।"
                         },
                         {
                             q: "অ্যাপটি কীভাবে ব্যবহার করব?",
-                            a: "কনটেন্ট লিংক কপি করুন, WavePulse খুলে লিংক দিন এবং ফাইল ডাউনলোড ও সংরক্ষণ করতে উপলব্ধ অপশনগুলো দেখুন।"
+                            a: "অডিও লিংক কপি করুন, WavePulse খুলে লিংক দিন এবং অডিও ফাইল ডাউনলোড ও সংরক্ষণ করতে উপলব্ধ অপশনগুলো দেখুন।"
                         },
                         {
                             q: "অ্যাপটি কি ফ্রি?",
-                            a: "হ্যাঁ, আপনি APK ফাইল ডাউনলোড করে অ্যাপের উপলব্ধ ফিচারগুলো বিনামূল্যে ব্যবহার করতে পারবেন।"
+                            a: "হ্যাঁ, আপনি APK ফাইল ডাউনলোড করে অ্যাপের উপলব্ধ অডিও ফিচারগুলো বিনামূল্যে ব্যবহার করতে পারবেন।"
                         },
                         {
                             q: "অ্যাকাউন্ট খুলতে কি প্রয়োজন হয়?",
-                            a: "লিংক দিতে এবং ফাইল ডাউনলোড করতে কোনো অ্যাকাউন্ট তৈরির প্রয়োজন নেই।"
+                            a: "লিংক দিতে এবং অডিও ফাইল ডাউনলোড করতে কোনো অ্যাকাউন্ট তৈরির প্রয়োজন নেই।"
                         },
                         {
                             q: "ডাউনলোড করা ফাইল কোথায় পাব?",
-                            a: "সংরক্ষিত ফাইলগুলো অ্যাপের ফাইল লাইব্রেরিতে এবং আপনার ডিভাইস স্টোরেজে পাবেন।"
+                            a: "সংরক্ষিত অডিও ফাইলগুলো অ্যাপের ফাইল লাইব্রেরিতে এবং আপনার ডিভাইস স্টোরেজে পাবেন।"
                         },
                         {
                             q: "ফাইল কীভাবে শেয়ার করতে পারি?",
-                            a: "অ্যাপ লাইব্রেরি থেকে Android শেয়ার মেনুর মাধ্যমে সহজেই ফাইল শেয়ার করা যায়।"
+                            a: "অ্যাপ লাইব্রেরি থেকে Android শেয়ার মেনুর মাধ্যমে সহজেই অডিও ফাইল শেয়ার করা যায়।"
                         },
                         {
                             q: "Android-এ অ্যাপটি কীভাবে ইনস্টল করব?",
@@ -1487,6 +1524,9 @@
 
                 const ogDesc = document.getElementById("og-desc");
                 if (ogDesc) ogDesc.setAttribute("content", dict.metaDesc);
+
+                document.getElementById("headerTitle").textContent = dict.headerTitle;
+                document.getElementById("headerSub").textContent = dict.headerSub;
 
                 const heroTitle = document.getElementById("heroTitle");
                 heroTitle.innerHTML = "";
