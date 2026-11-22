@@ -9,8 +9,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" id="og-title" content="تنزيل اغاني سونو مجانا — تحميل الاغاني مجانا">
     <meta property="og:description" id="og-desc" content="تنزيل اغاني سونو مجانا وتحميل الاغاني مجانا بصيغة صوت فقط للأندرويد، وحفظها في مكتبة التطبيق ومشاركتها.">
-    <meta property="og:image" content="https://servicesgeneral.github.io/Sunw3/Screenshot_20261122_190236.jpg">
-    <meta property="og:url" content="https://servicesgeneral.github.io/Sunw3/">
+    <meta property="og:image" content="https://servicesgeneral.github.io/suno-songs-downloader/screen-download.png">
+    <meta property="og:url" content="https://servicesgeneral.github.io/suno-songs-downloader/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -363,6 +363,60 @@
             display: block;
             user-select: none;
             -webkit-user-drag: none;
+        }
+
+        /* Fallback UI when screenshot file is missing or broken */
+        .screen-fallback {
+            width: 100%;
+            height: 100%;
+            min-height: 220px;
+            border-radius: inherit;
+            background: linear-gradient(160deg, rgba(255, 107, 53, 0.16) 0%, rgba(255, 77, 141, 0.12) 48%, var(--bg-card) 100%);
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .screen-fallback-badge {
+            align-self: center;
+            padding: 4px 12px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-orange);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .screen-fallback-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .screen-fallback-sub {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .screen-fallback-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .screen-fallback-bar {
+            height: 10px;
+            border-radius: 999px;
+            background: var(--border-strong);
+        }
+
+        .screen-fallback-bar.short {
+            width: 68%;
+            margin-inline: auto;
         }
 
         @keyframes floatDevice {
@@ -772,7 +826,7 @@
 
                 <div class="hero-visual reveal is-visible">
                     <div class="hero-device">
-                        <img src="Screenshot_20261122_190236.jpg" alt="WavePulse interface">
+                        <img src="screen-download.png" alt="WavePulse interface" data-fallback-badge="WavePulse" data-fallback-title="WavePulse interface" data-fallback-sub="واجهة التطبيق على أندرويد">
                     </div>
                 </div>
             </div>
@@ -789,28 +843,28 @@
                 <div class="showcase-grid">
                     <article class="phone-card reveal">
                         <div class="phone-screen-wrap">
-                            <img src="Screenshot_20261122_190236.jpg" alt="Download screen">
+                            <img src="screen-download.png" alt="Download screen" data-fallback-badge="Download" data-fallback-title="Download screen" data-fallback-sub="شاشة تنزيل المحتوى">
                         </div>
                         <p class="phone-caption" id="capDownload">شاشة تنزيل المحتوى</p>
                     </article>
 
                     <article class="phone-card reveal">
                         <div class="phone-screen-wrap">
-                            <img src="Screenshot_20261122_10232.jpg" alt="Main screen">
+                            <img src="screen-light.png" alt="Main screen" data-fallback-badge="Main" data-fallback-title="Main screen" data-fallback-sub="الواجهة الرئيسية">
                         </div>
                         <p class="phone-caption" id="capHome">الواجهة الرئيسية</p>
                     </article>
 
                     <article class="phone-card reveal">
                         <div class="phone-screen-wrap">
-                            <img src="Screenshot_20261122_190240.jpg" alt="Files library">
+                            <img src="screen-library.png" alt="Files library" data-fallback-badge="Library" data-fallback-title="Files library" data-fallback-sub="مكتبة الملفات">
                         </div>
                         <p class="phone-caption" id="capLibrary">مكتبة الملفات</p>
                     </article>
 
                     <article class="phone-card reveal">
                         <div class="phone-screen-wrap">
-                            <img src="Screenshot_20261122_190254.jpg" alt="App settings">
+                            <img src="screen-settings.png" alt="App settings" data-fallback-badge="Settings" data-fallback-title="App settings" data-fallback-sub="إعدادات التطبيق">
                         </div>
                         <p class="phone-caption" id="capSettings">إعدادات التطبيق</p>
                     </article>
@@ -1369,6 +1423,57 @@
                 '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>'
             ];
 
+            function renderImageFallback(img) {
+                if (!img || !img.parentNode || img.dataset.fallbackApplied === "1") return;
+                img.dataset.fallbackApplied = "1";
+
+                const box = document.createElement("div");
+                box.className = "screen-fallback";
+
+                const badge = document.createElement("span");
+                badge.className = "screen-fallback-badge";
+                badge.textContent = img.getAttribute("data-fallback-badge") || "WavePulse";
+
+                const topGroup = document.createElement("div");
+                const title = document.createElement("div");
+                title.className = "screen-fallback-title";
+                title.textContent = img.getAttribute("alt") || img.getAttribute("data-fallback-title") || "WavePulse";
+
+                const sub = document.createElement("div");
+                sub.className = "screen-fallback-sub";
+                sub.textContent = img.getAttribute("data-fallback-sub") || "";
+
+                topGroup.appendChild(title);
+                if (sub.textContent) topGroup.appendChild(sub);
+
+                const bars = document.createElement("div");
+                bars.className = "screen-fallback-lines";
+                const b1 = document.createElement("div");
+                b1.className = "screen-fallback-bar";
+                const b2 = document.createElement("div");
+                b2.className = "screen-fallback-bar short";
+                bars.appendChild(b1);
+                bars.appendChild(b2);
+
+                box.appendChild(badge);
+                box.appendChild(topGroup);
+                box.appendChild(bars);
+
+                img.replaceWith(box);
+            }
+
+            function initImageGuards() {
+                document.querySelectorAll("img").forEach((img) => {
+                    img.addEventListener("error", function () {
+                        renderImageFallback(img);
+                    }, { once: true });
+
+                    if (img.complete && img.naturalWidth === 0) {
+                        renderImageFallback(img);
+                    }
+                });
+            }
+
             function detectInitialLang() {
                 try {
                     const saved = localStorage.getItem(STORAGE_LANG_KEY);
@@ -1597,6 +1702,7 @@
             document.addEventListener("DOMContentLoaded", function () {
                 applyTheme(detectInitialTheme());
                 applyLanguage(detectInitialLang());
+                initImageGuards();
                 initScrollReveal();
 
                 document.getElementById("langSelect").addEventListener("change", function (e) {
